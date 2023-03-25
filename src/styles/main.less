@@ -1,0 +1,16 @@
+@title-color: black;
+@nav-spacing: 10px;
+
+h2 {
+  color: @title-color;
+}
+
+nav > a:not(:first-child) {
+  margin-left: @nav-spacing;
+}
+
+.mainNav {
+  display: flex;
+  align-items: center;
+  gap: @nav-spacing;
+}
