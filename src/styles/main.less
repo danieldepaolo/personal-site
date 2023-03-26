@@ -1,16 +1,48 @@
-@title-color: black;
-@nav-spacing: 10px;
+@nav-spacing: 25px;
+@content-width: 768px;
 
-h2 {
-  color: @title-color;
+body {
+  margin: 0;
 }
 
-nav > a:not(:first-child) {
-  margin-left: @nav-spacing;
+.homeLink {
+  text-decoration: none;
+}
+
+.homeText {
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+
+nav > a {
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  font-size: 18px;
+
+  &:hover {
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+  }
+
+  &:not(:first-child) {
+    margin-left: @nav-spacing;
+  }
 }
 
 .mainNav {
+  padding: 15px 0;
+  background-color: #e3fce4;
+}
+
+.navInner {
+  width: @content-width;
   display: flex;
   align-items: center;
-  gap: @nav-spacing;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.detail {
+  width: @content-width;
+  margin: 0 auto;
 }
