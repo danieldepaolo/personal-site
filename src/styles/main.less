@@ -12,6 +12,7 @@ body {
 .homeText {
   font-size: 20px;
   letter-spacing: 0.1em;
+  font-weight: bold;
 }
 
 nav > a {
@@ -43,19 +44,31 @@ nav > a {
 }
 
 .detail {
+  position: relative;
   width: @content-width;
   margin: 0 auto;
+  padding: 16px 0;
 }
 
-.screenshotContainer {
-  padding: 16px;
-  border: 1px inset rgba(0,0,0,0.1);
-}
-
-img {
+.screenshot {
   display: block;
   width: 100%;
   height: auto;
+  padding: 16px;
+  border: 1px inset rgba(0,0,0,0.1);
+  transition: transform ease-in-out 0.3s;
+
+  &:hover {
+    cursor: zoom-in;
+  }
+}
+
+.zoomed {
+  width: 140%;
+  position: absolute;
+  &:hover {
+    cursor: zoom-out;
+  }
 }
 
 figcaption {
