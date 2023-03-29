@@ -14,6 +14,7 @@ const Screenshot: FC<ScreenshotProps> = ({ image, caption }) => {
         <img className={`screenshot${zoomed ? ' zoomed' : ''}`} src={image} />
         {caption && <figcaption>{caption}</figcaption>}
       </figure>
+      {zoomed && <div className="dimmer" onClick={() => setZoomed(false)} />}
     </>
     
   );

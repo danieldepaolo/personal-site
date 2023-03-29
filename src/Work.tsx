@@ -1,10 +1,10 @@
 import Screenshot from './Screenshot';
 
-import currencyImg from './images/Cc_Playground_Currencies_Page.png';
-import perksImg from './images/Cc_Playground_Perks_Page.png';
-import playgroundImg from './images/Cc_Playground_Playground_Page.png';
-import transactionsImg from './images/Cc_Playground_Transactions_Page.png';
-import siGameHeaderImg from './images/SI_Game_Header.png';
+import currencyImg from './images/screenshots/Cc_Playground_Currencies_Page.png';
+import perksImg from './images/screenshots/Cc_Playground_Perks_Page.png';
+import playgroundImg from './images/screenshots/Cc_Playground_Playground_Page.png';
+import transactionsImg from './images/screenshots/Cc_Playground_Transactions_Page.png';
+import siGameHeaderImg from './images/screenshots/SI_Game_Header.png';
 
 export default function Work() {
   return (
