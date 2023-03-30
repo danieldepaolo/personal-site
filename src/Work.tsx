@@ -37,10 +37,12 @@ export default function Work() {
         <li>Database stores transactions, credit cards, currency types, and card perks</li>
       </ul>
       <h4>Screenshots</h4>
-      <Screenshot image={playgroundImg} caption="The primary view where the user can select cards and find out the value they'd get with that combination." />
-      <Screenshot image={transactionsImg} caption="Table showing the user's transactions." />
-      <Screenshot image={currencyImg} caption="Reward card currencies list view. They are stored in the backend db." />
-      <Screenshot image={perksImg} caption="Reward card perks list view." />
+      <div className="photoGrid">
+        <Screenshot image={playgroundImg} caption="The primary view where the user can select cards and find out the value they'd get with that combination." />
+        <Screenshot image={transactionsImg} caption="Table showing the user's transactions." />
+        <Screenshot image={currencyImg} caption="Reward card currencies list view. They are stored in the backend db." />
+        <Screenshot image={perksImg} caption="Reward card perks list view." />
+      </div>
     </>
   );
 }
