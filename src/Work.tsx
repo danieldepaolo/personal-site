@@ -14,7 +14,7 @@ export default function Work() {
       <div className="card">
         <h3>Sports Illustrated</h3>
         <Screenshot
-          image={siGameHeaderImg}
+          imageSrc={siGameHeaderImg}
           caption={
             <>
               Game header in post-game state. <a href="https://www.si.com/nba/game/dallas-mavericks-vs-indiana-pacers-march-27-2023">Page in production</a>.
@@ -41,10 +41,10 @@ export default function Work() {
         </ul>
         <h4>Screenshots</h4>
         <div className="photoGrid">
-          <Screenshot image={playgroundImg} caption="The primary view where the user can select cards and find out the value they'd get with that combination." />
-          <Screenshot image={transactionsImg} caption="Table showing the user's transactions." />
-          <Screenshot image={currencyImg} caption="Reward card currencies list view. They are stored in the backend db." />
-          <Screenshot image={perksImg} caption="Reward card perks list view." />
+          <Screenshot imageSrc={playgroundImg} caption="The primary view where the user can select cards and find out the value they'd get with that combination." />
+          <Screenshot imageSrc={transactionsImg} caption="Table showing the user's transactions." />
+          <Screenshot imageSrc={currencyImg} caption="Reward card currencies list view. They are stored in the backend db." />
+          <Screenshot imageSrc={perksImg} caption="Reward card perks list view." />
         </div>
       </div>
     </>
