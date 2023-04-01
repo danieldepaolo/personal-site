@@ -20,9 +20,9 @@ export default function Photography() {
   return (
     <>
       <h2>Seattle Photos</h2>
-      {seattleImages.length && <ImageGallery images={seattleImages} />}
+      {!!seattleImages.length && <ImageGallery images={seattleImages} />}
       <h2>San Francisco Bay Area Photos</h2>
-      {sfBayAreaImages.length && <ImageGallery images={sfBayAreaImages} />}
+      {!!sfBayAreaImages.length && <ImageGallery images={sfBayAreaImages} />}
     </>
   );
 }
