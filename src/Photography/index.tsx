@@ -1,6 +1,5 @@
 const seattleImports = Object.values(import.meta.glob("../images/photos/Seattle/*", { as: 'url' }));
 const sfBayAreaImports = Object.values(import.meta.glob("../images/photos/SfBayArea/*", { as: 'url' }));
-console.log(seattleImports);
 
 import { useEffect, useState } from "react";
 import { createAppImages } from "./util";
