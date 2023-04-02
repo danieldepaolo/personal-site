@@ -1,4 +1,4 @@
-import { FC, ReactNode, useState } from "react";
+import { FC, ReactNode, useRef, useState } from "react";
 
 interface ScreenshotProps {
   imageSrc: string;
@@ -7,11 +7,28 @@ interface ScreenshotProps {
 
 const Screenshot: FC<ScreenshotProps> = ({ imageSrc, caption }) => {
   const [zoomed, setZoomed] = useState(false);
+  const imgRef = useRef<HTMLImageElement | null>(null);
+
+  const getImgClassName = () => {
+    const classes = ['screenshot'];
+    if (zoomed) {
+      classes.push('zoomed');
+      if (imgRef.current && (imgRef.current.naturalHeight > imgRef.current.naturalWidth)) {
+        classes.push('zoomed-tall');
+      }
+    }
+    return classes.join(' ');
+  };
 
   return (
     <>
       <figure className="screenshotContainer">
-        <img className={`screenshot${zoomed ? ' zoomed' : ''}`} src={imageSrc} onClick={() => setZoomed(!zoomed)} />
+        <img
+          className={getImgClassName()}
+          src={imageSrc}
+          ref={imgRef}
+          onClick={() => setZoomed(!zoomed)}
+        />
         {caption && <figcaption>{caption}</figcaption>}
       </figure>
       {zoomed && <div className="dimmer" onClick={() => setZoomed(false)} />}

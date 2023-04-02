@@ -9,6 +9,8 @@ export default function Nav() {
           <Link to='/about'>About</Link>
           <Link to='/work'>Work</Link>
           <Link to='/photography'>Photography</Link>
+          <a href="https://www.linkedin.com/in/danieldepaolo/">LinkedIn</a>
+          <a href="https://github.com/danieldepaolo">GitHub</a>
         </nav>
       </div>
     </div>

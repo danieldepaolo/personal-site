@@ -4,25 +4,41 @@ import currencyImg from './images/screenshots/Cc_Playground_Currencies_Page.png'
 import perksImg from './images/screenshots/Cc_Playground_Perks_Page.png';
 import playgroundImg from './images/screenshots/Cc_Playground_Playground_Page.png';
 import transactionsImg from './images/screenshots/Cc_Playground_Transactions_Page.png';
-import siGameHeaderImg from './images/screenshots/SI_Game_Header.png';
+import siGameHeaderPost from './images/screenshots/SI_Game_Header.png';
+import siGameHeaderLive from './images/screenshots/SI_Game_Header_Live_NHL.png';
+import sspContact from './images/screenshots/Self_Service_Portal_Contact_Us.png';
+import sspProfile from './images/screenshots/Self_Service_Portal_Profile.png';
+import sspComms from './images/screenshots/Self_Service_Portal_Communications.png';
 import niceDaysCounterSeattle from './images/screenshots/Nice_Days_Counter_Seattle_2018_Results.png';
 import niceDaysCounterChicago from './images/screenshots/Nice_Days_Counter_Chicago_2018_Results.png';
 
 export default function Work() {
   return (
     <>
-      <a href="https://www.linkedin.com/in/danieldepaolo/">My LinkedIn Profile</a><br /><br />
-      <a href="https://github.com/danieldepaolo">My GitHub</a>
       <h2>Professional</h2>
       <div className="card">
-        <h3>Sports Illustrated</h3>
-        <Screenshot
-          imageSrc={siGameHeaderImg}
-          caption={
-            <>
-              Game header in post-game state. <a href="https://www.si.com/nba/game/dallas-mavericks-vs-indiana-pacers-march-27-2023">Page in production</a>.
-            </>}
-        />
+        <h3>Sports Illustrated Game Page Headers</h3>
+        <div className="screenshotGrid">
+          <Screenshot
+            imageSrc={siGameHeaderPost}
+            caption={
+              <>
+                Game header in post-game state. <a href="https://www.si.com/nba/game/dallas-mavericks-vs-indiana-pacers-march-27-2023">Page in production</a>.
+              </>}
+          />
+          <Screenshot
+            imageSrc={siGameHeaderLive}
+            caption="Game header in live game state. It will only be in this state for the duration of the game, so a link wouldn't work here."
+          />
+        </div>
+      </div>
+      <div className="card">
+        <h3>Self-Service Portal</h3>
+        <div className="screenshotGrid">
+          <Screenshot imageSrc={sspContact} />
+          <Screenshot imageSrc={sspProfile} />
+          <Screenshot imageSrc={sspComms} />
+        </div>
       </div>
 
       <h2>Personal Projects</h2>

@@ -1,6 +1,9 @@
 @nav-spacing: 16px;
 @max-content-width: 1080px;
-@nav-link-color: #eaeef7;
+@nav-link-color: #324776;
+@nav-zindex: 3;
+@dimmer-zindex: 10;
+@zoomed-image-zindex: 20;
 
 body {
   margin: 0;
@@ -37,7 +40,10 @@ nav > a {
 
 .mainNav {
   padding: 14px 5%;
-  background-color: #124417e3;
+  background-color: #abbdade3;
+  position: sticky;
+  top: 0;
+  z-index: @nav-zindex;
 }
 
 .navInner {
@@ -54,6 +60,7 @@ nav > a {
   max-width: @max-content-width;
   margin: 0 auto;
   padding: 16px 0;
+  overflow: auto;
 }
 
 .screenshotContainer {
@@ -71,16 +78,23 @@ nav > a {
 }
 
 .zoomed {
-  width: 90%;
+  width: 95%;
+  max-width: 1160px;
+  max-height: 100%;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 500;
+  z-index: @zoomed-image-zindex;
 
   &:hover {
     cursor: zoom-out;
   }
+}
+
+.zoomed-tall {
+  width: auto;
+  height: 95%;
 }
 
 .dimmer {
@@ -90,7 +104,7 @@ nav > a {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 4;
+  z-index: @dimmer-zindex;
   background: black;
   opacity: 0.8;
 }
@@ -101,6 +115,17 @@ nav > a {
   margin: 16px 0;
   border-radius: 10px;
   box-shadow: 0 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 180px auto;
+}
+
+.sidebar {
+  background: white;
+  height: 100%;
+  padding: 12px 8px;
 }
 
 .screenshotGrid {
