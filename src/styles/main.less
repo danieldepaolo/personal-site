@@ -1,148 +1,16 @@
-@nav-spacing: 16px;
-@max-content-width: 1080px;
-@nav-link-color: #324776;
-@nav-zindex: 3;
-@dimmer-zindex: 10;
-@zoomed-image-zindex: 20;
+@import 'base';
+@import 'variables';
 
-body {
-  margin: 0;
-  background: #f9f9f9;
-}
+@import 'layouts/page';
+@import 'layouts/nav';
 
-.homeLink {
-  text-decoration: none;
-}
+@import 'components/card';
+@import 'components/work-item';
+@import 'components/screenshot';
+@import 'components/dimmer';
 
-.homeText {
-  font-size: 24px;
-  letter-spacing: 0.06em;
-  font-weight: bold;
-  color: @nav-link-color;
-}
-
-nav > a {
-  text-decoration: none;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  font-size: 17px;
-  color: @nav-link-color;
-
-  &:hover {
-    padding-bottom: 5px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
-  }
-
-  &:not(:first-child) {
-    margin-left: @nav-spacing;
-  }
-}
-
-.mainNav {
-  padding: 14px 5%;
-  background-color: #abbdade3;
-  position: sticky;
-  top: 0;
-  z-index: @nav-zindex;
-}
-
-.navInner {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-.detail {
-  width: 90%;
-  max-width: @max-content-width;
-  margin: 0 auto;
-  padding: 16px 4px;
-  overflow: auto;
-}
-
-.screenshotContainer {
-}
-
-.screenshot {
-  display: block;
-  height: auto;
-  background: white;
-  width: 100%;
-
-  &:hover {
-    cursor: zoom-in;
-  }
-}
-
-.zoomed {
-  width: 95%;
-  max-width: 1160px;
-  max-height: 100%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: @zoomed-image-zindex;
-
-  &:hover {
-    cursor: zoom-out;
-  }
-}
-
-.zoomed-tall {
-  width: auto;
-  height: 95%;
-}
-
-.dimmer {
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: @dimmer-zindex;
-  background: black;
-  opacity: 0.8;
-}
-
-.card {
-  background: white;
-  padding: 8px 16px 12px 16px;
-  margin: 16px 0;
-  border-radius: 10px;
-  box-shadow: 0 0 1px 1px rgba(0,0,0,0.2);
-}
-
-.content {
-  display: grid;
-  grid-template-columns: 180px auto;
-}
-
-.sidebar {
-  background: white;
-  height: 100%;
-  padding: 12px 8px;
-}
-
-.screenshotGrid {
-  display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-  gap: 12px;
-
-  figure {
-    margin: 0;
-  }
-}
+@import 'utilities';
 
 .imageGalleryContainer {
-  min-height: 180px;
-}
-
-figcaption {
-  margin-top: 8px;
-  font-style: italic;
+  min-height: 18rem;
 }

@@ -1,0 +1,36 @@
+.navigation {
+  gap: 12px;
+  padding: 1rem 4rem;
+  background-color: lighten(@color-secondary, 30%);
+  box-shadow: 0 .3rem 1rem @color-faded-light-black;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: @max-content-width;
+  }
+
+  &__home-link {
+    font-size: 2.6rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    color: @color-primary;
+  }
+
+  &__links a {
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: @color-primary;
+
+    &:hover {
+      padding-bottom: .8rem;
+      border-bottom: 2px solid @color-faded-medium-black;
+    }
+
+    &:not(:first-child) {
+      margin-left: 2rem;
+    }
+  }
+}

@@ -1,6 +1,6 @@
-import danielImage from '../src/images/photos/20230423_121929.jpg';
+import danielImage from '../images/photos/20230423_121929.jpg';
 
-export default function About() {
+export default function Home() {
   return (
     <div>
       <img src={danielImage} width={400} alt="Daniel DePaolo face" />
